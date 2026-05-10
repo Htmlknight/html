@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Wrapper - Liquid Layout */
+#wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+header h1.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #b74b4b;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+header nav li {
+    display: inline-block;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+header nav a:hover,
+header nav a.active {
+    background-color: #b74b4b;
+    color: white;
+}
+
+/* Main Content */
+main {
+    margin-bottom: 3rem;
+}
+
+article {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Two Column Layout */
+.two-column {
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+}
+
+.col-1,
+.col-2 {
+    flex: 1;
+    min-width: 45%;
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: #2c3e50;
+}
+
+/* Text */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Lists */
+ol,
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+    color: #b74b4b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a03a3a;
+    text-decoration: underline;
+}
+
+/* Images - Flexible */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Aside */
+aside {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid #b74b4b;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+aside ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+aside li {
+    padding-left: 1rem;
+    position: relative;
+}
+
+aside li:before {
+    content: "→ ";
+    position: absolute;
+    left: 0;
+    color: #b74b4b;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #b74b4b;
+}
+
+footer a:hover {
+    color: #d4a8a8;
+}
+
+/* Responsive Design - Media Query for Phone Viewports */
+@media (max-width: 768px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    #wrapper {
+        max-width: 95%;
+        padding: 0 2.5%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    header h1.logo {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header nav a {
+        padding: 0.75rem;
+        border-radius: 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .two-column {
+        flex-direction: column;
+    }
+
+    .col-1,
+    .col-2 {
+        min-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+
+    ol,
+    ul {
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    #wrapper {
+        max-width: 100%;
+        padding: 0 1.5%;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    header h1.logo {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    article {
+        padding: 1rem;
+    }
+}
+
+/* contact.html */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        #wrapper {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav a:hover,
+        header nav a.active {
+            background-color: #b74b4b;
+        }
+
+        main {
+            margin-bottom: 3rem;
+        }
+
+        .two-column {
+            display: flex;
+            gap: 3%;
+            flex-wrap: wrap;
+        }
+
+        .col-1 {
+            flex: 1;
+            min-width: 45%;
+        }
+
+        .col-2 {
+            flex: 1;
+            min-width: 45%;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 8rem;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #b74b4b;
+            box-shadow: 0 0 0 0.2rem rgba(183, 75, 75, 0.1);
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin: 1rem 0;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        .checkbox-item,
+        .radio-item {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .checkbox-item label,
+        .radio-item label {
+            display: inline;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #b74b4b;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a03a3a;
+        }
+
+        input[type="reset"] {
+            background-color: #ccc;
+            color: #333;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #bbb;
+        }
+
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        aside {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #b74b4b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            #wrapper {
+                max-width: 95%;
+                padding: 0 2.5%;
+            }
+
+            .two-column {
+                flex-direction: column;
+            }
+
+            .col-1,
+            .col-2 {
+                min-width: 100%;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
